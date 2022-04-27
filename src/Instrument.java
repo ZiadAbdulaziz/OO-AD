@@ -1,8 +1,8 @@
 
-public abstract class Instrument {
-	protected String serialNumber;
-	protected double price;
-	protected InstrumentSpec spec;
+public class Instrument {
+	private String serialNumber;
+	private double price;
+	private InstrumentSpec spec;
 	
 	public Instrument(String serialNumber, double price, InstrumentSpec spec) {
 		this.serialNumber = serialNumber;

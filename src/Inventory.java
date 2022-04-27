@@ -29,32 +29,19 @@ public class Inventory {
 		return null;
 	}
 	
-	public List<Mandolin> search(MandolinSpec searchSpec) {
-		List<Mandolin> matcingMandolins = new LinkedList<Mandolin>();
+	public List<Instrument> search(InstrumentSpec searchSpec) {
+		List<Instrument> matcingInstruments = new LinkedList<Instrument>();
 		for(Iterator<Instrument> i = inventory.iterator();i.hasNext();) {
 			try {
-				Mandolin mandolin = (Mandolin)i.next();
-				if(mandolin.getInstrumnetSpecs().matches(searchSpec)) {
-					matcingMandolins.add(mandolin);
+				Instrument instrument = (Instrument)i.next();
+				if(instrument.getInstrumnetSpecs().matches(searchSpec)) {
+					matcingInstruments.add(instrument);
 				}
 			}
 			catch(Exception e) {continue;}
 			
 		}
-		return matcingMandolins;
+		return matcingInstruments;
 	}
-	
-	public List<Guitar> search(GuitarSpecs searchSpec) {
-		List<Guitar> matcingGuitars = new LinkedList<Guitar>();
-		for(Iterator<Instrument> i = inventory.iterator();i.hasNext();) {
-			try {
-				Guitar guitar = (Guitar)i.next();
-				if(guitar.getInstrumnetSpecs().matches(searchSpec)) {
-					matcingGuitars.add(guitar);
-				}
-			}
-			catch(Exception e) {continue;}
-		}
-		return matcingGuitars;
-	}
+
 }

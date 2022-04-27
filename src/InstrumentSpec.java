@@ -1,5 +1,5 @@
 
-public abstract class InstrumentSpec {
+public class InstrumentSpec {
 	protected Builder builder;
 	protected String model;
 	protected Type type;
