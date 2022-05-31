@@ -6,6 +6,6 @@
 > Version 1.1
 > 
    desinged for more than one type but the design makes it harder to add them  
-> Version 1.2
+> Version 2.0
 > 
-   *Still working on*
+   *More flexable version that supports different types of instruments*
